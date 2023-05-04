@@ -76,7 +76,8 @@ class SegmentTree:
             self.tree_sq_sum[v] = self.tree_sq_sum[2 * v + 1] + self.tree_sq_sum[2 * v + 2]
 
     def multiply_range(self, l, r, k):
-        self._multiply_range(0, 0, self.n - 1, l, r - 1, k)
+        # self._multiply_range(0, 0, self.n - 1, l, r - 1, k)
+        self._multiply_range(0, 0, self.n - 1, l, r, k)
 
     def _multiply_range(self, v, tl, tr, l, r, k):
         self._propagate(v, tl, tr)
